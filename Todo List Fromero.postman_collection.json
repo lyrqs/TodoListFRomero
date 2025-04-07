@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "35b307d7-5bb5-4371-b822-4c8ebfa83099",
+		"name": "Todo List Fromero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9561389"
+	},
+	"item": [
+		{
+			"name": "Print",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{portValue}}/api/todolist/add?title=Test&description=Hello&category=Work",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portValue}}",
+					"path": [
+						"api",
+						"todolist",
+						"add"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Test"
+						},
+						{
+							"key": "description",
+							"value": "Hello"
+						},
+						{
+							"key": "category",
+							"value": "Work"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Progress",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "portValue",
+			"value": "5100",
+			"type": "string"
+		}
+	]
+}
