@@ -1,0 +1,6 @@
+@TodoList.Server_HostAddress = http://localhost:5100/swagger
+
+GET {{TodoList.Server_HostAddress}}/api/todolist/print
+Accept: application/json
+
+###
