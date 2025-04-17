@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TodoList.Domain.Aggregates;
 using TodoList.Domain.Interfaces;
 using TodoList.Domain.Interfaces.TodoList.Domain.Interfaces;
 using TodoList.Server.Models;
@@ -65,6 +66,14 @@ namespace TodoList.Server.Controllers
 
             var output = sw.ToString();
             return Ok(output);
+        }
+
+        [HttpGet("items")]
+        public IActionResult GetItems()
+        {
+            if (_todoList is TodoListAggregate list)
+                return Ok(list.GetAllItems()); 
+            return NotFound();
         }
     }
 }

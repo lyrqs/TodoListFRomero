@@ -21,7 +21,15 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
+builder.Services.AddCors();
+
 var app = builder.Build();
+
+app.UseCors(policy =>
+    policy.AllowAnyOrigin()
+          .AllowAnyHeader()
+          .AllowAnyMethod()
+);
 
 if (app.Environment.IsDevelopment())
 {

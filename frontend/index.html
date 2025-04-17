@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TodoList Front</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>TodoList - Fernando Romero</h1>
+
+  <section>
+    <h2>Add Item</h2>
+    <form id="addItemForm">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="text" id="description" placeholder="Description" required />
+      <select id="category"></select>
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Register Progress</h2>
+    <form id="addProgressForm">
+      <input type="number" id="itemId" placeholder="Item ID" required />
+      <input type="date" id="date" required />
+      <input type="number" id="percent" placeholder="Percent" required />
+      <button type="submit">Add Progress</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Todo Items</h2>
+    <button id="refreshBtn">Refresh List</button>
+    <div id="itemsContainer"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

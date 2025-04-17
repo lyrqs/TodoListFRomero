@@ -71,6 +71,11 @@ namespace TodoList.Domain.Aggregates
             }
         }
 
+        public IReadOnlyList<TodoItem> GetAllItems()
+        {
+            return _items.Values.ToList();
+        }
+
         private TodoItem GetItemById(int id)
         {
             if (!_items.TryGetValue(id, out var item))

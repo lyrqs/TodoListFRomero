@@ -10,6 +10,7 @@
         private readonly List<Progression> _progressions = new();
         public IReadOnlyList<Progression> Progressions => _progressions.AsReadOnly();
 
+        public decimal TotalProgress => GetTotalProgress();
         public bool IsCompleted => GetTotalProgress() == 100;
 
         public TodoItem(int id, string title, string description, string category)
